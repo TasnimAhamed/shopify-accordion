@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .accordion__title{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 1.1;
+        }
+        .faq-content {
+            margin-top: 20px;
+        }
+        .faq-content .panel {
+            box-shadow: none;
+            border: none;
+            border-bottom: 1px solid #dbd5d2;
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+        .faq-content .panel:last-child{
+            border-bottom: none;
+        }
+        .faq-content .panel-heading {
+            padding: 0;
+        }
+        .panel-heading {
+            padding: 10px 15px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+        .faq-content .panel-title {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .panel-title {
+            margin-bottom: 0;
+            font-size: 16px;
+            color: inherit;
+        }
+        .faq-content .panel-heading a {
+            display: block;
+            padding: 25px 20px 25px 70px;
+            text-decoration: none !important;
+            position: relative;
+        }
+        .panel-title>.small, .panel-title>.small>a, .panel-title>a, .panel-title>small, .panel-title>small>a {
+            color: inherit;
+        }
+        .faq-content .panel-heading .faq-icon {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (min-width: 768px){
+            .faq-content .panel-heading .faq-icon {
+                top: 22px;
+            }
+        }
+
+        .faq-content .panel-heading .faq-icon:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            border-bottom: 1px solid #000;
+        }
+        .faq-content .panel-heading .collapsed .faq-icon:after {
+            border-color: #000;
+        }
+        .faq-content .panel-heading .faq-icon:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            border-left: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .faq-content .panel-body {
+            padding: 0 20px 20px 70px;
+            font-size: 16px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <section class="default-page faq-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                    <h1 class="accordion__title">FAQ</h1>
+                    <article></article>
+                    <div id="shopify-section-faq" class="shopify-section">
+                        <div class="faq-content">
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="faqt1">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-bs-toggle="collapse" href="#faq1" aria-controls="faq1" class="ignore collapsed" aria-expanded="false">
+                                            What makes Body Restore different?
+                                            <div class="faq-icon"></div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="faq1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqt1" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        We use organic essential oils &amp; natural ingredients from the United Kingdom to create the aromatherapy home spa experience. We ensure that our tablets are crafted with perfection, packaged to ensure extended shell life and are made in the most eco-friendly environment.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="faqt2">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-bs-toggle="collapse" href="#faq2" aria-controls="faq2" class="ignore collapsed" aria-expanded="false">
+                                            What are the best practices in using these shower tablets?
+                                            <div class="faq-icon"></div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="faq2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqt2" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        We recommend to use one tablet per shower or two tablets to double the strength if needed. Use in hot shower and make sure it's not submerged in water but rather placed under the shower stream of hot water.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="faqt3">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-bs-toggle="collapse" href="#faq3" aria-controls="faq3" class="ignore collapsed" aria-expanded="true">
+                                            Will these tablets make the floor slippery and create stains/drain clogs?
+                                            <div class="faq-icon"></div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="faq3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="faqt3" aria-expanded="true">
+                                    <div class="panel-body">
+                                        These shower tablets will not make the floor slippery and unlike other branded shower tablets with petals, it will dissolve smoothly to create a no mess no drain clog experience.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="faqt4">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-bs-toggle="collapse" href="#faq4" aria-controls="faq4" class="ignore collapsed" aria-expanded="false">
+                                            Can these shower tablets be used as bath bombs?
+                                            <div class="faq-icon"></div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="faq4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqt4" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        We do not recommend these used as bath bombs. These tablets work best when not submerged in water, making it perfect for the shower experience. 
+                        
+                        However, you can place the shower tablet on the side of the bath tub and it will activate the aromatherapy with a sprinkle of water contact.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="faqt5">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-bs-toggle="collapse" href="#faq5" aria-controls="faq5" class="ignore collapsed" aria-expanded="false">
+                                            Do these shower tablets have a shelf life?
+                                            <div class="faq-icon"></div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="faq5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqt5" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        These shower tablets are individually foil wrapped to ensure maximum shell life.
+                        
+                        We recommend using the shower steamers within a year for the best experience.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="faqt6">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-bs-toggle="collapse" href="#faq6" aria-controls="faq6" class="ignore collapsed" aria-expanded="false">
+                                            How long does each shower tablet last?
+                                            <div class="faq-icon"></div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="faq6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqt6" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        Each tablet duration can vary for each person as shower water pressure can play a role in the longevity of each tablet. 
+                        
+                        It can range from 10 minutes to 30 minutes.
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="faqt7">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-bs-toggle="collapse" href="#faq7" aria-controls="faq7" class="ignore collapsed" aria-expanded="false">
+                                            Are the shower steamers safe to use during pregnancy?
+                                            <div class="faq-icon"></div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="faq7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqt7" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        Aromatherapy is generally safe for pregnant women. However, please do consult a doctor before use to confirm.
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="faqt8">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-bs-toggle="collapse" href="#faq8" aria-controls="faq8" class="ignore collapsed" aria-expanded="false">
+                                            How long does shipping take?
+                                            <div class="faq-icon"></div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="faq8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqt8" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        Shipping generally takes 5-7 business days. 
+                        
+                        However, COVID-19 has played a role in some slight shipping delays. It make take an additional few days to arrive.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="faqt9">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-bs-toggle="collapse" href="#faq9" aria-controls="faq9" class="ignore collapsed">
+                                            What's the return policy?
+                                            <div class="faq-icon"></div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="faq9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faqt9">
+                                    <div class="panel-body">
+                                        We strive our best to ensure the best customer experience. 
+                        
+                        We're so confident you'll love our products that we offer a 30 day refund policy.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
